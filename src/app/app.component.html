@@ -1,0 +1,14 @@
+
+
+<form 
+  novalidate 
+  (ngSubmit)="saveNote(noteForm)" 
+  #noteForm="ngForm">
+  <input [(ngModel)]="newNote" #noteInput="ngModel" type="text" name="text">
+  <button type="submit">Add</button>
+</form>
+
+<div *ngFor="let note of notes" class="note">
+  {{note.text}} 
+</div>
+
